@@ -27,6 +27,7 @@ int main()
     // asks the user to enter the length and width of a rectangle
     // calculates and displays the perimeter and area of the rectangle
     // ask the user if they want to process another rectangle and continue to process rectangles until the user decides to quit
+
     int selection, length, width;
 
     do {
