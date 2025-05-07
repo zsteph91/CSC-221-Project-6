@@ -1,4 +1,4 @@
-// CSC 221 Project 6.cpp : Project 3: Celcius Temperature Table
+// CSC 221 Project 6.cpp : Project 4: Star Search
 //
 
 #include <iostream>
@@ -9,19 +9,35 @@
 #include <iostream>
 using namespace std;
 
-int getCelcius(int temp)
+int getScore()
 {
-    return (temp - 32) * 5 / 9;
+    random_device rd;
+    mt19937 gen(rd());
+    uniform_real_distribution<float> dis(0.0, 10.0);
+    float score = dis(gen);
+    return score;
+}
+
+bool isLower()
+{
+
+}
+
+bool isHigher()
+{
+
+}
+
+double calcAverage()
+{
+
 }
 
 int main()
 {
-    cout << "Temperatures in fahrenheit and celcius from 0 - 20:" << endl << endl;;
-    cout << "Fahrenheit: " << "Celcius: " << endl;
-    for (int temp = 0; temp <= 20; temp++)
-    {
-        cout << left << setw(12) << temp << getCelcius(temp) << endl;
-    }
+    float minScore, maxScore, score = getScore();
+
+
 
     return 0;
 }
