@@ -1,4 +1,4 @@
-// CSC 221 Project 6.cpp : Project 2: Safest Driving Area
+// CSC 221 Project 6.cpp : Project 3: Celcius Temperature Table
 //
 
 #include <iostream>
@@ -9,33 +9,19 @@
 #include <iostream>
 using namespace std;
 
-int getRegInfo(string regionName, int numAccidents) 
+int getCelcius(int temp)
 {
-    cout << "Enter name of region: ";
-    cin >> regionName;
-    cout << "Enter number of accidents in this region last year: ";
-    cin >> numAccidents;
-    return regionName, numAccidents;
-}
-
-bool isLower(int currentLowest, int accidents)
-{
-    if (accidents < currentLowest)
-    {
-        currentLowest = accidents;
-        return false;
-    }
-    return true;
-}
-
-void showLowest(string region, int accidents) 
-{
-    cout << region << accidents << endl;
+    return (temp - 32) * 5 / 9;
 }
 
 int main()
 {
-
+    cout << "Temperatures in fahrenheit and celcius from 0 - 20:" << endl << endl;;
+    cout << "Fahrenheit: " << "Celcius: " << endl;
+    for (int temp = 0; temp <= 20; temp++)
+    {
+        cout << left << setw(12) << temp << getCelcius(temp) << endl;
+    }
 
     return 0;
 }
